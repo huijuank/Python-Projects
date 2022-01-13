@@ -1,0 +1,21 @@
+dev_directory: ./dev_data
+eval_directory: ./eval_data
+feature:
+  frames: 5
+  hop_length: 512
+  n_fft: 1024
+  n_mels: 128
+  power: 2.0
+fit:
+  batch_size: 256
+  compile:
+    loss: mean_squared_error
+    optimizer: adam
+  epochs: 20
+  shuffle: true
+  validation_split: 0.1
+  verbose: 1
+max_fpr: 0.1
+model_directory: ./model
+result_directory: ./result
+result_file: result.csv
