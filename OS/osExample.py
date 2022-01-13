@@ -4,7 +4,18 @@ import numpy as np
 class dataprep():
 
     def __init__(self):
-        pass
+        """
+        Grab the .wav file and save the data
+        
+        """
+        ### This line initializes the file directory to use
+        # self.filedir = str(input("Base Directory: "))
+        self.filedir = "/filedir/"
+        
+        # This for loop counts the total number of files in the directory and prints the file names
+        for file in os.listdir(self.filedir):
+            count += 1
+            print (str(count) + '. ' + file)
         
     def training_data_ID(self, size_traindata):
         """
